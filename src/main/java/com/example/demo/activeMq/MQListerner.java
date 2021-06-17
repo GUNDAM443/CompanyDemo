@@ -21,11 +21,4 @@ public class MQListerner implements MessageListener {
             e.printStackTrace();
         }
     }
-
-    public static void main(String[] args) {
-//        int a= 4234692165;
-        int i = (int) 1234692165.0;
-        System.out.println(i);
-
-    }
 }

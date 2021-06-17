@@ -13,30 +13,31 @@ public class DelayThreadMission {
 
     public static void main(String[] args) {
 
-//        ScheduledExecutorService scheduled = Executors.newSingleThreadScheduledExecutor();
-//        ScheduledFuture<?> future = scheduled.schedule(() -> {
-//            try {
-//                System.out.println("开始执行任务");
-//                TimeUnit.SECONDS.sleep(3);
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//            System.out.println("执行完毕");
-//        }, 1000, TimeUnit.MILLISECONDS);
-//        System.out.println("阻塞开始");
-//
+        ScheduledExecutorService scheduled = Executors.newSingleThreadScheduledExecutor();
+        ScheduledFuture<?> future = scheduled.schedule(() -> {
+            try {
+                System.out.println("开始执行任务");
+                TimeUnit.SECONDS.sleep(3);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            System.out.println("执行完毕");
+            return "搞定";
+        }, 1000, TimeUnit.MILLISECONDS);
+        System.out.println("阻塞开始");
+
 //        if (scheduled != null){
 //            scheduled.shutdownNow();
 //            System.out.println("关闭任务");
 //        }
-//        try {
-//            System.out.println(future.get() + "");
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        } catch (ExecutionException e) {
-//            e.printStackTrace();
-//        }
-//        System.out.println("阻塞结束");
+        try {
+            System.out.println(future.get() + "");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        System.out.println("阻塞结束");
 
 
         /**

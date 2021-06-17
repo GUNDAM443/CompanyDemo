@@ -11,7 +11,7 @@ import java.util.Map;
  * @author : pp
  * @date : Created in 2020/5/7 13:52
  */
-//@Component
+@Component
 public class TestJob {
 
     @Scheduled(cron = "0/10 * * * * ?")
