@@ -1,5 +1,8 @@
 package com.example.demo.threadPoolExceutor.ExecutorDemo;
 
+import com.alibaba.fastjson.JSON;
+
+import java.util.Arrays;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -27,10 +30,23 @@ public class ExecutorDemo {
 
     public static void main(String[] args) {
 
-        executors.submit(()->{
-            for (int i=0;i<Integer.MAX_VALUE;i++){
-                System.out.println(i);
-            }
-        });
+//        executors.submit(()->{
+//            for (int i=0;i<Integer.MAX_VALUE;i++){
+//                System.out.println(i);
+//            }
+//        });
+//
+        String a = "aklhdjfkajdklfj a;sdkljfalsdj;flk djsf;lkjsd&*()a;lfkjad;slkfjasdklfja;ldksfja;ldksjalksj;aklsj;kdsajflks;flk;adsjf;kasdjfalkdjsfl;kadjsflkajsdfkja;sdkfl";
+        int i = a.hashCode();
+        System.out.println(i);
+        String b = "aaklhdjfkajdklfja;sdkljfalsdj;flkdjsf;lkjsda;lfkj ad;slkfjasdklfja;ldksfja;ldksjalksj;aklsj;kdsajflks;flk;adsjf;kasdjfalkdjsfl;kadjsflkajsdadskjf;lkjasd;lkfja;lkdsjf;ljsda;flkjas;dkfja;dlkfja;sdkjf;aksdj;faksdj;flkasjd;f;sklfadkj;faklds123123123[][][][]{}fkja;sdkfl";
+        int k = b.hashCode();
+        System.out.println(k);
+        Object[] o = new Object[2];
+        o[1] = "adf";
+        Object o1 = JSON.toJSON(o);
+        String s = Arrays.toString(o);
+        System.out.println(o1);
+
     }
 }

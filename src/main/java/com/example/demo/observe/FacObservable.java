@@ -7,8 +7,8 @@ import java.util.List;
  * @author : pp
  * @date : Created in 2020/6/9 17:03
  */
-public  class FacObservable implements SubjectObservable{
-    private List<MyObserver> list=new ArrayList<>();
+public class FacObservable implements SubjectObservable {
+    private List<MyObserver> list = new ArrayList<>();
 
     @Override
     public void addObserver(MyObserver myObserver) {
@@ -22,7 +22,7 @@ public  class FacObservable implements SubjectObservable{
 
     @Override
     public void notifyAllObserver() {
-        list.forEach(e->{
+        list.forEach(e -> {
             e.update();
         });
     }
