@@ -31,6 +31,6 @@ public class RedissonTest {
     @Test
     public void test02(){
         System.out.println("1111");
-        testJob.runfirst();
+//        testJob.runfirst();
     }
 }

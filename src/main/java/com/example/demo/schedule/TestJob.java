@@ -13,21 +13,21 @@ import java.util.Map;
  */
 @Component
 public class TestJob {
-
-    @Scheduled(cron = "0/10 * * * * ?")
-    public void runfirst() {
-        System.out.println("********first job is ok******");
-    }
-
-    @Scheduled(fixedRate = 1000 * 10)
-    public void runsecend() {
-        System.out.println("********second job is ok******");
-    }
-
-    @Scheduled(fixedDelay = 1000)
-    public void runThird() {
-        System.out.println("********third job is ok*******");
-    }
+//
+//    @Scheduled(cron = "0/10 * * * * ?")
+//    public void runfirst() {
+//        System.out.println("********first job is ok******");
+//    }
+//
+//    @Scheduled(fixedRate = 1000 * 10)
+//    public void runsecend() {
+//        System.out.println("********second job is ok******");
+//    }
+//
+//    @Scheduled(fixedDelay = 1000)
+//    public void runThird() {
+//        System.out.println("********third job is ok*******");
+//    }
 
     public static void main(String[] args) {
 //        Map<String, Object> stringObjectHashMap = new HashMap<>();

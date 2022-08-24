@@ -24,6 +24,7 @@ public class QuartzTest {
                     .withDescription("this is a job")
                     .withIdentity("job1","group1")
                     .usingJobData("level","老")
+                    .usingJobData("传递","传递的定时任务参数")
                     .build();
 
             JobDataMap jobDataMap = jobDetail.getJobDataMap();
@@ -31,7 +32,7 @@ public class QuartzTest {
             Trigger trigger = TriggerBuilder.newTrigger()
                     .withDescription("this is a trigger1")
                     //.withSchedule(SimpleScheduleBuilder.repeatSecondlyForTotalCount(3,1))
-//                .withSchedule(CronScheduleBuilder.cronSchedule("0 42 17 * * ?"))
+                .withSchedule(CronScheduleBuilder.cronSchedule("0 42 17 * * ?"))
                     .startAt(new Date(System.currentTimeMillis()+10000))
                     .withIdentity("trigger1","group1")
                     .build();
